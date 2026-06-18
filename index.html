@@ -484,6 +484,51 @@
     .price-lockup b { font-size: 44px; font-family: var(--head); line-height: 0.95; }
     .price-lockup span { color: var(--muted); font-size: 12px; text-transform: uppercase; font-weight: 800; }
 
+    .offer-badge {
+      display: inline-grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      gap: 10px;
+      width: max-content;
+      max-width: 100%;
+      border: 1px solid rgba(116,255,154,0.45);
+      background: rgba(116,255,154,0.08);
+      color: var(--green);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .offer-badge strong {
+      color: #06100a;
+      background: var(--green);
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 11px;
+    }
+
+    .simple-flow {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .flow-card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.035);
+      border-radius: 8px;
+      padding: 18px;
+      min-height: 150px;
+      display: grid;
+      align-content: space-between;
+      gap: 18px;
+    }
+
+    .flow-card b { font-size: 18px; line-height: 1.2; }
+    .flow-card span { color: var(--muted); font-size: 13px; line-height: 1.38; }
+
     .process-rail {
       display: grid;
       gap: 10px;
@@ -815,6 +860,138 @@
     .bar b { color: var(--ink); font-size: 13px; font-variant-numeric: tabular-nums; }
     .chart-legend { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; color: var(--muted); font-size: 12px; line-height: 1.3; }
 
+    .scenario-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+    }
+
+    .scenario-card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.035);
+      border-radius: 8px;
+      padding: 20px;
+      min-height: 390px;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 16px;
+    }
+
+    .scenario-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .scenario-head b {
+      font-size: 24px;
+      font-family: var(--head);
+      line-height: 1;
+    }
+
+    .scenario-head span {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .scenario-total b {
+      display: block;
+      font-size: 40px;
+      font-family: var(--head);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .scenario-total span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .scenario-mini-bars {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+      align-items: end;
+      min-height: 148px;
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+      padding: 8px 0 0;
+    }
+
+    .mini-bar {
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+      align-items: end;
+      height: 100%;
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .mini-bar i {
+      display: block;
+      width: 100%;
+      height: var(--h);
+      min-height: 8px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: linear-gradient(180deg, var(--green), rgba(69,213,255,0.42));
+    }
+
+    .mini-bar:nth-child(2) i { background: linear-gradient(180deg, var(--cyan), rgba(69,213,255,0.22)); }
+    .mini-bar:nth-child(3) i { background: linear-gradient(180deg, var(--amber), rgba(247,178,103,0.25)); }
+
+    .scenario-foot {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .return-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+    }
+
+    .return-card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.035);
+      border-radius: 8px;
+      padding: 22px;
+      min-height: 230px;
+      display: grid;
+      align-content: space-between;
+      gap: 18px;
+    }
+
+    .return-card b {
+      display: block;
+      font-family: var(--head);
+      font-size: 38px;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .return-card strong {
+      display: block;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .return-card span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.38;
+    }
+
     .module-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0,1fr));
@@ -1051,6 +1228,7 @@
       .top-title { display: none; }
       .grid-two, .grid-two.even, .revenue-grid, .report-grid { grid-template-columns: 1fr; }
       .benefit-grid, .module-grid, .investor-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .scenario-board, .return-grid { grid-template-columns: 1fr; }
       .grid-three, .reason-grid { grid-template-columns: 1fr; }
       .vs-grid { grid-template-columns: 1fr; }
       .vs-pill { justify-self: center; transform: rotate(90deg); }
@@ -1076,7 +1254,7 @@
       h3 { font-size: 19px; }
       .lead { font-size: 18px; line-height: 1.42; }
       .body-copy { font-size: 16px; }
-      .kpi-strip, .benefit-grid, .module-grid, .investor-grid, .product-panel, .pricing-matrix { grid-template-columns: 1fr; }
+      .kpi-strip, .benefit-grid, .module-grid, .investor-grid, .product-panel, .pricing-matrix, .simple-flow { grid-template-columns: 1fr; }
       .kpi b { font-size: 24px; }
       .panel, .card { padding: 18px; }
       .compare-card { min-height: 0; padding: 18px; }
@@ -1093,7 +1271,10 @@
       .chart-legend { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .fund-row { grid-template-columns: 1fr 1fr; }
       .fund-row .fund-track { grid-column: 1 / -1; grid-row: 2; }
-      .controls { top: 12px; right: 132px; bottom: auto; transform: none; grid-auto-flow: column; z-index: 35; }
+      .scenario-card { min-height: 0; }
+      .scenario-total b, .return-card b { font-size: 32px; }
+      .return-card { min-height: 0; }
+      .controls { top: 12px; right: 160px; bottom: auto; transform: none; grid-auto-flow: column; z-index: 35; }
       .controls .icon-btn { width: 36px; height: 36px; }
       .dots { display: none; }
       .slide::after { display: none; }
@@ -1153,21 +1334,21 @@
       <div class="top-title" id="topTitle">The AI Operating System for Convenience Stores</div>
       <div class="top-actions">
         <button class="icon-btn" id="infoToggle" type="button" aria-label="Open sources and index" title="Sources and index">i</button>
-        <div class="slide-count" aria-live="polite"><strong id="currentSlide">01</strong><span>/16</span></div>
+        <div class="slide-count" aria-live="polite"><strong id="currentSlide">01</strong><span id="totalSlides">/17</span></div>
       </div>
     </header>
     <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
     <main class="deck" id="deck">
-      <section class="slide hero active" data-num="01" data-title="The AI Operating System">
+      <section class="slide hero active" data-num="01" data-title="The AI Store OS">
         <div class="slide-inner">
           <div class="stack">
-            <div class="eyebrow">Enterprise AI for Independent Operators</div>
-            <h1 class="hero-title">The AI Operating System for Convenience Stores</h1>
-            <p class="lead hero-sub">A practical platform that helps independent stores make better inventory, layout, merchandising, and pricing decisions without hiring engineers or data scientists.</p>
+            <div class="eyebrow">Enterprise AI for Independent Stores</div>
+            <h1 class="hero-title">AI Tools for Independent Convenience Stores</h1>
+            <p class="lead hero-sub">We help store owners make better decisions on inventory, shelves, pricing, and profit. No engineers. No big software project. Clear actions owners can use.</p>
             <div class="kpi-strip">
-              <div class="kpi"><b>$1M</b><span>Strategic investment sought</span></div>
-              <div class="kpi"><b>$1,500</b><span>Gateway store assessment</span></div>
-              <div class="kpi"><b>$500-$1,500</b><span>Monthly intelligence subscription</span></div>
+              <div class="kpi"><b>CORE 1</b><span>Store Optimization Report</span></div>
+              <div class="kpi"><b>CORE 2</b><span>Inventory Intelligence</span></div>
+              <div class="kpi"><b>CORE 3</b><span>Pricing Intelligence</span></div>
             </div>
           </div>
         </div>
@@ -1177,27 +1358,27 @@
         <div class="slide-inner grid-two">
           <div class="stack">
             <div class="eyebrow">The problem</div>
-            <h2>Independent stores are entering an AI arms race without the army.</h2>
-            <p class="lead">Large chains are turning data into operating leverage. Independents still make too many high-margin decisions with gut feel, vendor pressure, and last month's sales report.</p>
+            <h2>Big chains have AI. Independent stores do not.</h2>
+            <p class="lead">Owners know their stores. But they do not have data teams, engineers, or expensive custom tools. The gap gets bigger every year.</p>
           </div>
           <div class="vs-grid">
             <div class="compare-card">
-              <h3>Large Chains <span class="tag">Compounding advantage</span></h3>
+              <h3>Large Chains <span class="tag">AI budget</span></h3>
               <ul class="list">
-                <li><span class="check"></span><span>Data science teams and analysts</span></li>
-                <li><span class="check"></span><span>Centralized category management</span></li>
-                <li><span class="check"></span><span>Custom digital, loyalty, and automation programs</span></li>
-                <li><span class="check"></span><span>Capital to test, learn, and scale new retail technology</span></li>
+                <li><span class="check"></span><span>Data teams</span></li>
+                <li><span class="check"></span><span>Custom software</span></li>
+                <li><span class="check"></span><span>Better buying decisions</span></li>
+                <li><span class="check"></span><span>Faster testing</span></li>
               </ul>
             </div>
             <div class="vs-pill">VS</div>
             <div class="compare-card">
-              <h3>Independents <span class="tag">Under-tooled</span></h3>
+              <h3>Independent Stores <span class="tag">Need tools</span></h3>
               <ul class="list">
-                <li><span class="check"></span><span>Owner-led decisions with limited analytical support</span></li>
-                <li><span class="check"></span><span>Fragmented POS exports and manual spreadsheets</span></li>
-                <li><span class="check"></span><span>Little budget for custom software or hardware pilots</span></li>
-                <li><span class="check"></span><span>High local knowledge, but no system to compound it</span></li>
+                <li><span class="check"></span><span>Local knowledge</span></li>
+                <li><span class="check"></span><span>Manual reports</span></li>
+                <li><span class="check"></span><span>Limited time</span></li>
+                <li><span class="check"></span><span>No AI team</span></li>
               </ul>
             </div>
           </div>
@@ -1208,20 +1389,20 @@
         <div class="slide-inner grid-two">
           <div class="stack">
             <div class="eyebrow">Market gap</div>
-            <h2>More than 154,000 U.S. stores. A tiny capture rate can become a large recurring business.</h2>
-            <p class="body-copy">The opportunity is not to replace the owner. It is to give the owner an operating system that sees what humans miss: dead shelf space, slow movement, margin leakage, and recurring category opportunities.</p>
+            <h2>The market is large. We only need a small share.</h2>
+            <p class="body-copy">There are more than 154,000 convenience stores in the U.S. Many independent owners need better tools, but cannot build them alone.</p>
             <div class="source-note">Source: NACS public industry materials reference a U.S. convenience industry of more than 154,000 stores. Business model assumptions are user-provided and illustrative.</div>
           </div>
           <div class="stack">
             <div class="panel">
               <div class="mega-number">154K+</div>
-              <p class="body-copy">Convenience stores across the U.S. industry, spanning chain operators, regional groups, franchises, and independents.</p>
+              <p class="body-copy">U.S. convenience stores.</p>
             </div>
             <div class="gap-bars" aria-label="Capability comparison">
-              <div class="gap-row"><span>AI teams</span><div class="gap-track"><span style="--w: 92%"></span></div><div class="gap-track soft"><span style="--w: 16%"></span></div></div>
-              <div class="gap-row"><span>Category data</span><div class="gap-track"><span style="--w: 88%"></span></div><div class="gap-track soft"><span style="--w: 28%"></span></div></div>
-              <div class="gap-row"><span>Speed to test</span><div class="gap-track"><span style="--w: 70%"></span></div><div class="gap-track soft"><span style="--w: 58%"></span></div></div>
-              <div class="gap-row"><span>Owner intimacy</span><div class="gap-track"><span style="--w: 38%"></span></div><div class="gap-track soft"><span style="--w: 90%"></span></div></div>
+              <div class="gap-row"><span>1% share</span><div class="gap-track"><span style="--w: 18%"></span></div><div class="gap-track soft"><span style="--w: 18%"></span></div></div>
+              <div class="gap-row"><span>2% share</span><div class="gap-track"><span style="--w: 36%"></span></div><div class="gap-track soft"><span style="--w: 36%"></span></div></div>
+              <div class="gap-row"><span>5% share</span><div class="gap-track"><span style="--w: 90%"></span></div><div class="gap-track soft"><span style="--w: 90%"></span></div></div>
+              <div class="gap-row"><span>Need</span><div class="gap-track"><span style="--w: 88%"></span></div><div class="gap-track soft"><span style="--w: 28%"></span></div></div>
             </div>
           </div>
         </div>
@@ -1231,18 +1412,19 @@
         <div class="slide-inner stack">
           <div class="stack">
             <div class="eyebrow">Positioning</div>
-            <h2>We are not selling software. We are selling higher profit per square foot.</h2>
-            <p class="lead tight">The wedge is simple: convert store photos and sales exports into owner-ready actions that improve inventory, layout, pricing, and merchandising.</p>
+            <h2>We sell better store decisions.</h2>
+            <p class="lead tight">Owners do not want complicated software. They want clear actions that help them sell more, waste less, and improve profit.</p>
           </div>
           <div class="benefit-grid">
-            <div class="benefit"><div class="mini-icon">01</div><strong>Higher profit</strong><span>Find products, placements, and promotions that improve margin without adding complexity.</span></div>
-            <div class="benefit"><div class="mini-icon">02</div><strong>Better inventory</strong><span>Turn movement data into recommended removals, adds, reorders, and seasonal plays.</span></div>
-            <div class="benefit"><div class="mini-icon">03</div><strong>Better merchandising</strong><span>Expose high-value locations, dead zones, adjacency improvements, and display opportunities.</span></div>
-            <div class="benefit"><div class="mini-icon">04</div><strong>Operational efficiency</strong><span>No upfront POS integration, hardware, or internal technical team required to start.</span></div>
+            <div class="benefit"><div class="mini-icon">01</div><strong>More profit</strong><span>Better product mix and margin decisions.</span></div>
+            <div class="benefit"><div class="mini-icon">02</div><strong>Less waste</strong><span>Find slow items before they cost money.</span></div>
+            <div class="benefit"><div class="mini-icon">03</div><strong>Better shelves</strong><span>Put the right products in the right spots.</span></div>
+            <div class="benefit"><div class="mini-icon">04</div><strong>Simple start</strong><span>No hardware or big install to begin.</span></div>
           </div>
-          <div class="thesis-line">
-            <h3>Core thesis</h3>
-            <p class="lead">Your store becomes smarter every month.</p>
+          <div class="simple-flow">
+            <div class="flow-card"><b>See</b><span>Photos, shelves, coolers, sales exports.</span></div>
+            <div class="flow-card"><b>Decide</b><span>AI finds what to keep, move, add, or remove.</span></div>
+            <div class="flow-card"><b>Improve</b><span>The store becomes smarter every month.</span></div>
           </div>
         </div>
       </section>
@@ -1250,19 +1432,19 @@
       <section class="slide" data-num="05" data-title="Gateway Service">
         <div class="slide-inner grid-two">
           <div class="stack">
-            <div class="eyebrow">Core offering 1</div>
+            <div class="offer-badge"><strong>CORE 1</strong><span>First paid offer</span></div>
             <h2>AI Store Optimization Report</h2>
-            <div class="price-lockup"><b>$1,500</b><span>Gateway service</span></div>
-            <p class="lead">Low-risk for owners. High-value for the business. It gets us inside the store, builds trust, collects structured data, and becomes the foundation for every future service.</p>
+            <div class="price-lockup"><b>$1,500</b><span>One-time report</span></div>
+            <p class="lead">We visit the store, photograph it, map it, and give the owner a clear improvement plan.</p>
           </div>
           <div class="panel">
-            <h3>Field workflow</h3>
+            <h3>Simple workflow</h3>
             <div class="process-rail" style="margin-top:16px">
-              <div class="process-step">Visit the store and capture operating context</div>
-              <div class="process-step">Photograph every shelf, cooler, display, and checkout area</div>
-              <div class="process-step">Capture dimensions and create a simple store map</div>
-              <div class="process-step">Run photos, layout, and notes through proprietary AI workflows</div>
-              <div class="process-step">Deliver a premium owner-ready optimization report</div>
+              <div class="process-step">Visit the store</div>
+              <div class="process-step">Photograph shelves, coolers, displays, and checkout</div>
+              <div class="process-step">Build a simple store map</div>
+              <div class="process-step">Run the AI analysis</div>
+              <div class="process-step">Deliver the owner report</div>
             </div>
           </div>
         </div>
@@ -1271,9 +1453,9 @@
       <section class="slide" data-num="06" data-title="The Report">
         <div class="slide-inner grid-two">
           <div class="stack">
-            <div class="eyebrow">What the owner receives</div>
-            <h2>A report that should feel worth $10,000+ for $1,500.</h2>
-            <p class="body-copy">The deliverable converts raw store reality into clear operating recommendations: what to move, what to remove, where to place, and what to test next.</p>
+            <div class="offer-badge"><strong>CORE 1</strong><span>Owner deliverable</span></div>
+            <h2>One report. Clear actions.</h2>
+            <p class="body-copy">The owner sees what to move, what to remove, what to add, and where the best store space is being wasted.</p>
           </div>
           <div class="report-frame" aria-label="Store optimization report mockup">
             <div class="report-top"><b>Store Optimization Report</b><span>Future-State Layout</span></div>
@@ -1287,10 +1469,10 @@
                 <div class="path-line"></div>
               </div>
               <div class="diagnostic-list">
-                <div class="diagnostic"><b>Inventory mapping</b><span>Product catalog, shelf position, facing count, and category grouping.</span></div>
-                <div class="diagnostic"><b>High-value locations</b><span>Checkout, traffic paths, end caps, cooler doors, and impulse zones.</span></div>
-                <div class="diagnostic"><b>Merchandising actions</b><span>Dead-space fixes, adjacency recommendations, and display ideas.</span></div>
-                <div class="diagnostic"><b>Future state</b><span>Visual diagrams owners can execute without a software rollout.</span></div>
+                <div class="diagnostic"><b>Inventory map</b><span>What products are in the store and where they sit.</span></div>
+                <div class="diagnostic"><b>Best space</b><span>Checkout, coolers, end caps, and traffic paths.</span></div>
+                <div class="diagnostic"><b>Dead space</b><span>Places that are not making enough money.</span></div>
+                <div class="diagnostic"><b>New layout</b><span>A simple plan the owner can use.</span></div>
               </div>
             </div>
           </div>
@@ -1300,12 +1482,12 @@
       <section class="slide" data-num="07" data-title="Inventory Intelligence">
         <div class="slide-inner grid-two">
           <div class="stack">
-            <div class="eyebrow">Core offering 2</div>
+            <div class="offer-badge"><strong>CORE 2</strong><span>Monthly subscription</span></div>
             <h2>AI Inventory Intelligence</h2>
-            <p class="lead">$500-$1,500 per month. No POS integration required at launch. Owners send daily or weekly sales exports, and the system turns movement into monthly actions.</p>
+            <p class="lead">$500-$1,500 per month. The owner sends sales exports. We turn sales data into clear inventory decisions.</p>
             <div class="product-panel">
-              <div class="product-box"><b>Monthly Inventory Report</b><ul><li>Best sellers and worst sellers</li><li>Overstocked and understocked items</li><li>Seasonal demand shifts</li><li>Slow-moving inventory</li></ul></div>
-              <div class="product-box"><b>Monthly Store Updates</b><ul><li>Product recommendations</li><li>Category mix improvements</li><li>Shelf updates</li><li>Merchandising recommendations</li></ul></div>
+              <div class="product-box"><b>Monthly Report</b><ul><li>Best sellers</li><li>Worst sellers</li><li>Overstocked items</li><li>Slow items</li></ul></div>
+              <div class="product-box"><b>Monthly Actions</b><ul><li>Remove weak products</li><li>Add missing products</li><li>Change shelf space</li><li>Improve product mix</li></ul></div>
             </div>
           </div>
           <div class="subscription-ui">
@@ -1318,9 +1500,9 @@
               <div class="panel" style="box-shadow:none;padding:18px;margin-top:6px">
                 <h3>Action queue</h3>
                 <ul class="list" style="margin-top:14px">
-                  <li><span class="check"></span><span>Expand summer cooler facings for top beverage categories.</span></li>
-                  <li><span class="check"></span><span>Reduce slow-moving novelty candy by two facings.</span></li>
-                  <li><span class="check"></span><span>Test bundled snack + energy drink placement near checkout.</span></li>
+                  <li><span class="check"></span><span>Give more space to fast drinks.</span></li>
+                  <li><span class="check"></span><span>Cut slow candy facings.</span></li>
+                  <li><span class="check"></span><span>Test snack + drink bundle near checkout.</span></li>
                 </ul>
               </div>
             </div>
@@ -1331,20 +1513,20 @@
       <section class="slide" data-num="08" data-title="Pricing Intelligence">
         <div class="slide-inner grid-two">
           <div class="stack">
-            <div class="eyebrow">Core offering 3</div>
+            <div class="offer-badge"><strong>CORE 3</strong><span>Premium subscription</span></div>
             <h2>Dynamic Pricing Intelligence</h2>
-            <p class="lead">Premium subscription layer. The goal is not aggressive surge pricing. It is intelligent margin optimization that protects customer loyalty.</p>
+            <p class="lead">This is not harsh surge pricing. It is smart margin help: better prices, better bundles, and better promotions.</p>
           </div>
           <div class="stack">
             <div class="pricing-matrix">
-              <div class="price-card"><b>Weekend beverage demand</b><span>Identify high-demand windows and recommend price, display, and bundle tests.</span></div>
-              <div class="price-card"><b>Holiday snack behavior</b><span>Prepare category mix and promotions before demand peaks.</span></div>
-              <div class="price-card"><b>Seasonal energy drinks</b><span>Adjust placement and pricing when local demand accelerates.</span></div>
-              <div class="price-card"><b>Summer vs winter patterns</b><span>Recommend margin moves based on repeatable local seasonality.</span></div>
+              <div class="price-card"><b>Weekend drinks</b><span>Adjust display, bundles, and price tests.</span></div>
+              <div class="price-card"><b>Holiday snacks</b><span>Prepare before demand rises.</span></div>
+              <div class="price-card"><b>Energy drinks</b><span>Protect margin on fast items.</span></div>
+              <div class="price-card"><b>Season changes</b><span>Shift pricing and shelf space by season.</span></div>
             </div>
             <div class="panel" style="box-shadow:none">
-              <h3>Owner-safe principle</h3>
-              <p class="lead" style="margin-top:10px">Increase profitability without hurting customer loyalty.</p>
+              <h3>Simple rule</h3>
+              <p class="lead" style="margin-top:10px">Improve profit without losing customer trust.</p>
             </div>
           </div>
         </div>
@@ -1354,22 +1536,22 @@
         <div class="slide-inner grid-two">
           <div class="stack">
             <div class="eyebrow">Why these three</div>
-            <h2>The offer ladder starts simple, then compounds into recurring revenue.</h2>
+            <h2>Three separate offers. One clear path.</h2>
             <div class="ladder">
-              <div class="ladder-step"><span class="num">01</span><div><b>Store Assessment</b><span>One-time trust builder and data capture event.</span></div><span class="ladder-price">$1,500</span></div>
+              <div class="ladder-step"><span class="num">CORE 1</span><div><b>Store Optimization Report</b><span>One-time report. Builds trust.</span></div><span class="ladder-price">$1,500</span></div>
               <div class="ladder-arrow"></div>
-              <div class="ladder-step"><span class="num">02</span><div><b>Inventory Intelligence</b><span>Recurring monthly recommendations from sales movement.</span></div><span class="ladder-price">$500-$1,500/mo</span></div>
+              <div class="ladder-step"><span class="num">CORE 2</span><div><b>Inventory Intelligence</b><span>Monthly reports and actions.</span></div><span class="ladder-price">$500-$1,500/mo</span></div>
               <div class="ladder-arrow"></div>
-              <div class="ladder-step"><span class="num">03</span><div><b>Pricing Intelligence</b><span>Premium margin optimization from accumulated store data.</span></div><span class="ladder-price">Premium</span></div>
+              <div class="ladder-step"><span class="num">CORE 3</span><div><b>Pricing Intelligence</b><span>Premium margin help.</span></div><span class="ladder-price">Premium</span></div>
             </div>
           </div>
           <div class="reason-grid">
-            <div class="reason"><b>Highest ROI</b>Inventory, layout, and margin are direct owner pain points.</div>
-            <div class="reason"><b>Lowest complexity</b>No expensive hardware or deep integration to start.</div>
-            <div class="reason"><b>Fast deployment</b>Photos and exports create value quickly.</div>
-            <div class="reason"><b>Easy to understand</b>Owners can see the actions, not just the software.</div>
-            <div class="reason"><b>Easy to scale</b>The playbook repeats across stores and regions.</div>
-            <div class="reason"><b>Recurring revenue</b>The report naturally leads to monthly intelligence.</div>
+            <div class="reason"><b>High ROI</b>Inventory, layout, and margin affect profit.</div>
+            <div class="reason"><b>Low complexity</b>No major hardware to start.</div>
+            <div class="reason"><b>Fast start</b>Photos and exports are enough.</div>
+            <div class="reason"><b>Easy to sell</b>Owners understand the problem.</div>
+            <div class="reason"><b>Easy to repeat</b>The same playbook works in many stores.</div>
+            <div class="reason"><b>Recurring revenue</b>Reports lead to monthly service.</div>
           </div>
         </div>
       </section>
@@ -1378,34 +1560,42 @@
         <div class="slide-inner stack">
           <div class="stack">
             <div class="eyebrow">Revenue model</div>
-            <h2>Even modest adoption creates meaningful recurring revenue.</h2>
-            <p class="body-copy">Illustrative model uses a $1,500 assessment and $1,000 average monthly subscription revenue per store.</p>
+            <h2>The model is simple.</h2>
+            <p class="body-copy">$1,500 one-time report. Then about $1,000 per month per subscribed store. These are examples, not promises.</p>
           </div>
-          <div class="scenario-controls" aria-label="Store count scenarios">
-            <button class="scenario-btn active" type="button" data-scenario="100">100 stores</button>
-            <button class="scenario-btn" type="button" data-scenario="500">500 stores</button>
-            <button class="scenario-btn" type="button" data-scenario="1000">1,000 stores</button>
-          </div>
-          <div class="revenue-grid">
-            <div class="revenue-metrics">
-              <div class="metric-box"><span>Store assessment revenue</span><b id="assessmentValue">$150K</b></div>
-              <div class="metric-box"><span>Monthly recurring revenue</span><b id="mrrValue">$100K</b></div>
-              <div class="metric-box"><span>Annualized recurring revenue</span><b id="arrValue">$1.2M</b></div>
-              <div class="metric-box"><span>Year-one revenue potential</span><b id="yearValue">$1.35M</b></div>
-            </div>
-            <div class="revenue-chart" aria-label="Revenue scenario chart">
-              <div class="bars" id="bars">
-                <div class="bar"><span style="--h:11%"></span><b id="barAssessment">$150K</b></div>
-                <div class="bar"><span style="--h:8%"></span><b id="barMrr">$100K</b></div>
-                <div class="bar"><span style="--h:89%"></span><b id="barArr">$1.2M</b></div>
-                <div class="bar"><span style="--h:100%"></span><b id="barYear">$1.35M</b></div>
+          <div class="scenario-board" aria-label="Static revenue examples">
+            <div class="scenario-card">
+              <div class="scenario-head"><b>100 stores</b><span>Start</span></div>
+              <div class="scenario-total"><b>$1.35M</b><span>Year-one revenue example</span></div>
+              <div class="scenario-mini-bars">
+                <div class="mini-bar"><i style="--h:20%"></i><span>$150K<br>Reports</span></div>
+                <div class="mini-bar"><i style="--h:15%"></i><span>$100K<br>MRR</span></div>
+                <div class="mini-bar"><i style="--h:75%"></i><span>$1.2M<br>ARR</span></div>
               </div>
-              <div class="chart-legend">
-                <span>Assessment</span><span>MRR</span><span>ARR</span><span>Year one</span>
+              <div class="scenario-foot">Small footprint. Strong proof of demand.</div>
+            </div>
+            <div class="scenario-card">
+              <div class="scenario-head"><b>500 stores</b><span>Scale</span></div>
+              <div class="scenario-total"><b>$6.75M</b><span>Year-one revenue example</span></div>
+              <div class="scenario-mini-bars">
+                <div class="mini-bar"><i style="--h:20%"></i><span>$750K<br>Reports</span></div>
+                <div class="mini-bar"><i style="--h:15%"></i><span>$500K<br>MRR</span></div>
+                <div class="mini-bar"><i style="--h:75%"></i><span>$6M<br>ARR</span></div>
               </div>
+              <div class="scenario-foot">Regional business with real recurring revenue.</div>
+            </div>
+            <div class="scenario-card">
+              <div class="scenario-head"><b>1,000 stores</b><span>Platform</span></div>
+              <div class="scenario-total"><b>$13.5M</b><span>Year-one revenue example</span></div>
+              <div class="scenario-mini-bars">
+                <div class="mini-bar"><i style="--h:20%"></i><span>$1.5M<br>Reports</span></div>
+                <div class="mini-bar"><i style="--h:15%"></i><span>$1M<br>MRR</span></div>
+                <div class="mini-bar"><i style="--h:75%"></i><span>$12M<br>ARR</span></div>
+              </div>
+              <div class="scenario-foot">A national niche platform can become very valuable.</div>
             </div>
           </div>
-          <div class="source-note">Assumption model only. Actual revenue depends on conversion, retention, pricing mix, geographic density, and service delivery capacity.</div>
+          <div class="source-note">Assumption model only. Actual results depend on sales, retention, pricing, and delivery capacity.</div>
         </div>
       </section>
 
@@ -1413,8 +1603,8 @@
         <div class="slide-inner stack">
           <div class="stack">
             <div class="eyebrow">Future AI modules</div>
-            <h2>The roadmap creates future upsell surface without distracting from the wedge.</h2>
-            <p class="body-copy">These are not the first product. They are expansion modules once the platform has store maps, inventory intelligence, and trusted operator relationships.</p>
+            <h2>More modules can be sold later.</h2>
+            <p class="body-copy">These are future upsells. The first business stays focused on Core 1, Core 2, and Core 3.</p>
           </div>
           <div class="module-grid">
             <div class="module"><b>AI Loss Prevention</b><span>$5K-$10K setup</span></div>
@@ -1433,17 +1623,17 @@
         <div class="slide-inner grid-two">
           <div class="stack">
             <div class="eyebrow">Competitive advantage</div>
-            <h2>The moat is not software. The moat is store-level data.</h2>
-            <p class="lead">Every assessed store improves the recommendations for the next store. The platform compounds across inventory, layout, traffic flow, category performance, and pricing behavior.</p>
+            <h2>The moat is store data.</h2>
+            <p class="lead">Every store teaches the system. More stores mean better reports, better inventory advice, and better pricing advice.</p>
           </div>
           <div class="flywheel" aria-label="Data flywheel diagram">
             <div class="fly-ring"></div>
-            <div class="fly-center">Smarter convenience store AI</div>
-            <div class="fly-item one"><b>Store assessments</b><span>Photos, dimensions, maps, shelves, coolers, checkout zones.</span></div>
-            <div class="fly-item two"><b>Inventory movement</b><span>Daily or weekly sales exports create product-level learning.</span></div>
-            <div class="fly-item three"><b>Recommendations</b><span>Layout, product, pricing, and merchandising actions.</span></div>
-            <div class="fly-item four"><b>Owner results</b><span>Higher trust, better retention, more data, more referrals.</span></div>
-            <div class="fly-item five"><b>More locations</b><span>Each new store improves the playbook and benchmark set.</span></div>
+            <div class="fly-center">Smarter AI for stores</div>
+            <div class="fly-item one"><b>Store photos</b><span>Shelves, coolers, checkout, layout.</span></div>
+            <div class="fly-item two"><b>Sales data</b><span>Daily or weekly exports.</span></div>
+            <div class="fly-item three"><b>Better advice</b><span>Products, shelves, price, promotions.</span></div>
+            <div class="fly-item four"><b>Better results</b><span>More trust and more renewals.</span></div>
+            <div class="fly-item five"><b>More stores</b><span>More learning and stronger benchmarks.</span></div>
           </div>
         </div>
       </section>
@@ -1452,26 +1642,42 @@
         <div class="slide-inner grid-two">
           <div class="stack">
             <div class="eyebrow">Go to market</div>
-            <h2>Strategic owner-investors are the first customers, references, and distribution network.</h2>
-            <p class="lead">This raise is designed for industry operators, not traditional venture capital. The first investor group can benefit twice: equity upside and direct store-level operating improvements.</p>
+            <h2>Store owners are the best first customers.</h2>
+            <p class="lead">The first investors can also be first users. Their stores prove the product and help open doors to other owners.</p>
           </div>
           <div class="grid-three">
-            <div class="card"><h3>Phase 1</h3><p class="body-copy" style="margin-top:12px">Founder-led assessments for investor-owned stores. Convert early stores into proof points and repeatable workflows.</p></div>
-            <div class="card"><h3>Phase 2</h3><p class="body-copy" style="margin-top:12px">Regional sales through owner networks, supplier relationships, and operator referrals.</p></div>
-            <div class="card"><h3>Phase 3</h3><p class="body-copy" style="margin-top:12px">Standardized onboarding teams, AI report production, and subscription account management.</p></div>
+            <div class="card"><h3>1. Pilot stores</h3><p class="body-copy" style="margin-top:12px">Start with investor-owned locations.</p></div>
+            <div class="card"><h3>2. Proof</h3><p class="body-copy" style="margin-top:12px">Show reports, savings, and new revenue.</p></div>
+            <div class="card"><h3>3. Referrals</h3><p class="body-copy" style="margin-top:12px">Use owner networks to sell more stores.</p></div>
           </div>
         </div>
       </section>
 
-      <section class="slide" data-num="14" data-title="Use of Funds">
+      <section class="slide" data-num="14" data-title="Why Invest">
+        <div class="slide-inner stack">
+          <div class="stack">
+            <div class="eyebrow">Why these investors</div>
+            <h2>Owners can win in two ways.</h2>
+            <p class="lead tight">They can own part of the company, and they can use the product inside their own stores.</p>
+          </div>
+          <div class="investor-grid">
+            <div class="investor-card"><div class="mini-icon">01</div><b>You know the pain</b><span>You understand inventory, margins, theft, labor, and local customers.</span></div>
+            <div class="investor-card"><div class="mini-icon">02</div><b>You can test fast</b><span>Your stores can become early proof points.</span></div>
+            <div class="investor-card"><div class="mini-icon">03</div><b>You can refer others</b><span>Owners trust other owners more than software salespeople.</span></div>
+            <div class="investor-card"><div class="mini-icon">04</div><b>You share the upside</b><span>If the company grows, your equity can grow too.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-num="15" data-title="Use of Funds">
         <div class="slide-inner grid-two">
           <div class="stack">
-            <div class="eyebrow">Investor opportunity</div>
-            <h2>Seeking $1,000,000 to build the platform and commercial engine.</h2>
-            <p class="body-copy">Capital funds the tools, workflows, sales motion, and delivery infrastructure needed to turn a high-trust service into a recurring software-enabled business.</p>
+            <div class="eyebrow">Use of funds</div>
+            <h2>Capital builds the product and the sales engine.</h2>
+            <p class="body-copy">The money goes into the platform, AI workflows, store onboarding, sales, and operations. The goal is to turn a service into a repeatable company.</p>
           </div>
           <div class="panel">
-            <h3>Capital allocation</h3>
+            <h3>How funds are used</h3>
             <div class="funds" style="margin-top:22px">
               <div class="fund-row"><span>Platform development</span><div class="fund-track"><span style="--w:40%"></span></div><b>40%</b></div>
               <div class="fund-row"><span>AI workflows</span><div class="fund-track"><span style="--w:25%"></span></div><b>25%</b></div>
@@ -1482,32 +1688,32 @@
         </div>
       </section>
 
-      <section class="slide" data-num="15" data-title="Investor Upside">
+      <section class="slide" data-num="16" data-title="Return Potential">
         <div class="slide-inner stack">
           <div class="stack">
-            <div class="eyebrow">Why owners invest</div>
-            <h2>The right investor is not just buying equity. They are helping create the operating layer their own stores need.</h2>
+            <div class="eyebrow">Potential return</div>
+            <h2>Returns can come from company value and store profit.</h2>
+            <p class="body-copy">Example only. Actual returns depend on deal terms, ownership percentage, revenue, profit, and market conditions.</p>
           </div>
-          <div class="investor-grid">
-            <div class="investor-card"><div class="mini-icon">01</div><b>Equity appreciation</b><span>Participate in the value of a recurring revenue platform aimed at an under-served industry.</span></div>
-            <div class="investor-card"><div class="mini-icon">02</div><b>Recurring revenue growth</b><span>Subscriptions can convert one-time store assessments into compounding monthly revenue.</span></div>
-            <div class="investor-card"><div class="mini-icon">03</div><b>Strategic ownership</b><span>Operators help shape a category-specific AI platform before larger vendors define the market.</span></div>
-            <div class="investor-card"><div class="mini-icon">04</div><b>Direct store benefits</b><span>Investor-owned stores can become early deployment sites and operational proof points.</span></div>
+          <div class="return-grid">
+            <div class="return-card"><div><strong>Company value</strong><span>If 500 stores create $6M ARR, a 3x revenue value is about:</span></div><b>$18M</b></div>
+            <div class="return-card"><div><strong>Equity example</strong><span>A 2% ownership stake at that value would be about:</span></div><b>$360K</b></div>
+            <div class="return-card"><div><strong>Store upside</strong><span>Investors can also use the product to improve their own stores.</span></div><b>Direct benefit</b></div>
           </div>
-          <div class="source-note">Sources and context: user-provided business model; NACS U.S. store-count and technology research pages; Seven & i IR materials on 7-Eleven transformation; public reporting on Circle K / Couche-Tard smart checkout deployment. This presentation is not an offer to sell securities.</div>
+          <div class="source-note">Illustrative only. This presentation is not an offer to sell securities or a guarantee of returns.</div>
         </div>
       </section>
 
-      <section class="slide final-slide" data-num="16" data-title="The Future">
+      <section class="slide final-slide" data-num="17" data-title="The Future">
         <div class="slide-inner stack">
           <div class="eyebrow">The future</div>
           <h2>The Future of Convenience Stores Will Be AI-Powered</h2>
-          <p class="lead">Large chains already know this.</p>
-          <p class="lead">Independent operators deserve access too.</p>
+          <p class="lead">Big chains already know this.</p>
+          <p class="lead">Independent owners deserve the same power.</p>
           <p class="lead accent">We are building the AI operating system for independent convenience stores.</p>
           <div class="final-cta">
             <b>Seeking $1,000,000 Strategic Investment</b>
-            <span>To build the platform that helps independent operators compete with billion-dollar chains.</span>
+            <span>To build the platform that helps independent owners compete with billion-dollar chains.</span>
           </div>
         </div>
       </section>
@@ -1525,7 +1731,7 @@
 
     <aside class="info-panel" id="infoPanel" aria-label="Sources and slide index">
       <h3>Sources and assumptions</h3>
-      <p>All product offers, pricing, capital target, future modules, and the revenue scenarios are based on the supplied investor brief. Revenue outputs are illustrative and not audited forecasts.</p>
+      <p>Product offers, pricing, future modules, and revenue scenarios are based on the supplied investor brief. Revenue and return examples are illustrative and not audited forecasts.</p>
       <ul>
         <li><a href="https://www.convenience.org/Research/Convenience-Store-Fast-Facts-and-Stats/FactSheets/IndustryStoreCount" target="_blank" rel="noreferrer">NACS U.S. Convenience Store Count</a> for industry scale context.</li>
         <li><a href="https://www.convenience.org/Research/Operational-Growth-and-Efficiencies/Convenience-Retail-Tech-Implementation-Benchmarks" target="_blank" rel="noreferrer">NACS Convenience Retail Technology Implementation & Benchmarks</a> for category-specific technology context.</li>
@@ -1543,6 +1749,7 @@
       var current = 0;
       var progress = document.getElementById("progressBar");
       var currentSlide = document.getElementById("currentSlide");
+      var totalSlides = document.getElementById("totalSlides");
       var topTitle = document.getElementById("topTitle");
       var dots = document.getElementById("dots");
       var indexGrid = document.getElementById("indexGrid");
@@ -1553,6 +1760,7 @@
       var wheelLock = false;
 
       function pad(n) { return String(n).padStart(2, "0"); }
+      totalSlides.textContent = "/" + slides.length;
 
       slides.forEach(function (slide, i) {
         var dot = document.createElement("button");
@@ -1639,45 +1847,6 @@
         infoToggle.setAttribute("aria-expanded", open ? "true" : "false");
       });
 
-      var scenarios = {
-        "100": { assessment: 150000, mrr: 100000, arr: 1200000, year: 1350000 },
-        "500": { assessment: 750000, mrr: 500000, arr: 6000000, year: 6750000 },
-        "1000": { assessment: 1500000, mrr: 1000000, arr: 12000000, year: 13500000 }
-      };
-
-      function money(value) {
-        if (value >= 1000000) {
-          var m = value / 1000000;
-          return "$" + (Number.isInteger(m) ? m.toFixed(0) : m.toFixed(2).replace(/0$/, "")) + "M";
-        }
-        return "$" + Math.round(value / 1000) + "K";
-      }
-
-      function setScenario(key) {
-        var s = scenarios[key];
-        var values = [s.assessment, s.mrr, s.arr, s.year];
-        var max = Math.max.apply(Math, values);
-        document.getElementById("assessmentValue").textContent = money(s.assessment);
-        document.getElementById("mrrValue").textContent = money(s.mrr);
-        document.getElementById("arrValue").textContent = money(s.arr);
-        document.getElementById("yearValue").textContent = money(s.year);
-        document.getElementById("barAssessment").textContent = money(s.assessment);
-        document.getElementById("barMrr").textContent = money(s.mrr);
-        document.getElementById("barArr").textContent = money(s.arr);
-        document.getElementById("barYear").textContent = money(s.year);
-        Array.prototype.slice.call(document.querySelectorAll(".bar span")).forEach(function (bar, i) {
-          var pct = Math.max(8, Math.round((values[i] / max) * 100));
-          bar.style.setProperty("--h", pct + "%");
-        });
-        Array.prototype.slice.call(document.querySelectorAll(".scenario-btn")).forEach(function (btn) {
-          btn.classList.toggle("active", btn.dataset.scenario === key);
-        });
-      }
-
-      Array.prototype.slice.call(document.querySelectorAll(".scenario-btn")).forEach(function (btn) {
-        btn.addEventListener("click", function () { setScenario(btn.dataset.scenario); });
-      });
-
       var hashMatch = window.location.hash.match(/slide-(\d+)/);
       if (hashMatch) {
         var target = parseInt(hashMatch[1], 10) - 1;
@@ -1688,7 +1857,6 @@
         }
       }
       update();
-      setScenario("100");
     })();
   </script>
 </body>
